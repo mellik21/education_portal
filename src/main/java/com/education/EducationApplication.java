@@ -1,4 +1,4 @@
-package com.github.mellik21.education;
+package com.education;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.github.mellik21.education.model;
+package com.education.model;
 
 import org.hibernate.annotations.GenericGenerator;
 

@@ -1,4 +1,4 @@
-package com.github.mellik21.education;
+package com.education;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

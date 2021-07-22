@@ -1,6 +1,6 @@
-package com.github.mellik21.education.controller;
+package com.education.controller;
 
-import com.github.mellik21.education.service.PersonService;
+import com.education.service.PersonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

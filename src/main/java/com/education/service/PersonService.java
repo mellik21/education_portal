@@ -1,6 +1,6 @@
-package com.github.mellik21.education.service;
+package com.education.service;
 
-import com.github.mellik21.education.repository.PersonRepository;
+import com.education.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
