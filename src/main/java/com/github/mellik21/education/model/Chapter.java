@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "chapter")
+@Entity
 @Table(name = "chapter")
 @Data
 public class Chapter extends BaseEntity {

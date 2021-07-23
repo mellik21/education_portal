@@ -7,7 +7,7 @@ import javax.persistence.*;
 /**
  * Курс
  */
-@Entity(name = "course")
+@Entity
 @Table(name = "course")
 @Data
 public class Course extends BaseEntity {

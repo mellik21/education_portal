@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Студент конкретного курса, его успехи и выбранные ответы
  */
-@Entity(name = "student")
+@Entity
 @Table(name = "student")
 public class Student extends Man {
     @ManyToOne(fetch = FetchType.LAZY)

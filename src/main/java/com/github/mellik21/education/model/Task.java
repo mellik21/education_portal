@@ -9,7 +9,7 @@ import javax.persistence.*;
 /**
  * Задача, расположенная в определенной теме
  */
-@Entity(name = "task")
+@Entity
 @Table(name = "task")
 @Data
 public class Task extends BaseEntity {
