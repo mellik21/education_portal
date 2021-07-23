@@ -19,8 +19,7 @@ public class Task extends BaseEntity {
     private String title;
     private String taskText;
     private int taskIndex;
-    //TODO: does it mapped to string in table correctly?
-    @Column(name = "TASK_ANSWER_TYPE", length = 1024)
+    @Enumerated(EnumType.STRING)
     private TaskAnswerTypeEnum taskAnswerType;
 
 }
