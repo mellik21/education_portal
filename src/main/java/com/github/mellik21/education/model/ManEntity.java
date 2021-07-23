@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name = "man")
 @Data
-public class Man extends BaseEntity {
+public class ManEntity extends BaseEntity {
     /**
      * Основная информация о любом человеке (кроме логина, пароля и др)
      */

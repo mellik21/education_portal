@@ -10,10 +10,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "course")
 @Data
-public class Course extends BaseEntity {
+public class CourseEntity extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_AUTHOR_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_MAN"))
-    private Man author;
+    private ManEntity author;
     private String title;
     private String description;
     // private List<Chapter> chapters; TODO: Нужны ли эти поля?

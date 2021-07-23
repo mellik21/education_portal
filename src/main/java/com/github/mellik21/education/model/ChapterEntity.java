@@ -8,13 +8,13 @@ import java.util.List;
 @Entity
 @Table(name = "chapter")
 @Data
-public class Chapter extends BaseEntity {
+public class ChapterEntity extends BaseEntity {
     /**
      * Подтема курса
      */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_COURSE_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_COURSE"))
-    private Course course;
+    private CourseEntity course;
 
     private String title;
 
@@ -31,6 +31,6 @@ public class Chapter extends BaseEntity {
                     foreignKey = @ForeignKey(name = "CHAPTER_TASKS_2_TASK")
             )}
     )
-    private List<Task> tasks;
+    private List<TaskEntity> tasks;
 
 }

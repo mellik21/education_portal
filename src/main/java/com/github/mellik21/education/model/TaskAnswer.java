@@ -11,7 +11,7 @@ public class TaskAnswer extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_TASK_ID", foreignKey = @ForeignKey(name = "TASK_ANSWER_2_TASK"))
-    private Task task;
+    private TaskEntity task;
     private String answer;
     private Long score;
     private int answerIndex;

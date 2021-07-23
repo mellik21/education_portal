@@ -8,10 +8,10 @@ import java.util.List;
  */
 @Entity
 @Table(name = "student")
-public class Student extends Man {
+public class StudentEntity extends ManEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_COURSE_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_COURSE"))
-    private Course course;
+    private CourseEntity course;
     private Long score;
 
     @OneToMany

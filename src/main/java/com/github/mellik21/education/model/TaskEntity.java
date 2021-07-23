@@ -12,10 +12,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "task")
 @Data
-public class Task extends BaseEntity {
+public class TaskEntity extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_CHAPTER_ID", foreignKey = @ForeignKey(name = "TASK_2_CHAPTER"))
-    private Chapter chapter;
+    private ChapterEntity chapter;
     private String title;
     private String taskText;
     private int taskIndex;
