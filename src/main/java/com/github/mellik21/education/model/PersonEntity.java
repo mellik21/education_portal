@@ -1,21 +1,15 @@
 package com.github.mellik21.education.model;
 
-import org.hibernate.annotations.GenericGenerator;
+import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "person")
-public class PersonEntity {
-
-    @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    String id;
+@Data
+public class PersonEntity extends BaseEntity{
 
     String fullName;
     String firstName;

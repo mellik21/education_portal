@@ -1,13 +1,15 @@
 package com.github.mellik21.education.model;
 
-import javax.persistence.Column;
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
 
 @Entity(name = "man")
-@Table(name = "MAN", schema = "EDU_PORTAL")
-public class Man extends ModelEntity {
+@Table(name = "man")
+@Data
+public class Man extends BaseEntity {
     /**
      * Основная информация о любом человеке (кроме логина, пароля и др)
      */
@@ -19,60 +21,4 @@ public class Man extends ModelEntity {
     private String patronymic;
     private Date birthDay;
 
-    public Man() {
-    }
-
-    @Column(name = "PHONE", length = 10)
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(final String phone) {
-        this.phone = phone;
-    }
-
-    @Column(name = "EMAIL", length = 20)
-    public String getEMail() {
-        return email;
-    }
-
-    public void setEmail(final String email) {
-        this.email = email;
-    }
-
-    @Column(name = "SURNAME", length = 10)
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(final String surname) {
-        this.surname = surname;
-    }
-
-    @Column(name = "NAME", length = 10)
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
-
-    @Column(name = "PATRONYMIC", length = 10)
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public void setPatronymic(final String patronymic) {
-        this.patronymic = patronymic;
-    }
-
-    @Column(name = "BIRTH_DATE", length = 10)
-    public Date getBirthDay() {
-        return birthDay;
-    }
-
-    public void setBirthDay(final Date birthDay) {
-        this.birthDay = birthDay;
-    }
 }

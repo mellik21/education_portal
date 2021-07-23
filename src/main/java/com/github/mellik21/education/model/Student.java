@@ -3,36 +3,16 @@ package com.github.mellik21.education.model;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Студент конкретного курса, его успехи и выбранные ответы
+ */
 @Entity(name = "student")
-@Table(name = "STUDENT", schema = "EDU_PORTAL")
+@Table(name = "student")
 public class Student extends Man {
-    /**
-     * Студент конкретного курса, его успехи и выбранные ответы
-     */
-    private Course course;
-    private Long score;
-    private List<TaskAnswer> taskAnswers;
-
-    public Student(){
-
-    }
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_COURSE_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_COURSE"))
-    public Course getCourse() {
-        return course;
-    }
-    public void setCourse(final Course course){
-        this.course = course;
-    }
-
-    @Column(name = "SCORE")
-    public Long getScore() {
-        return score;
-    }
-    public void setScore(Long score) {
-        this.score = score;
-    }
+    private Course course;
+    private Long score;
 
     @OneToMany
     @JoinTable(name = "STUDENT_ANSWERS", schema = "EDU_PORTAL",
@@ -45,11 +25,6 @@ public class Student extends Man {
                     foreignKey = @ForeignKey(name = "STUDENT_ANSWERS_2_TASK_ANSWER")
             )}
     )
-    public List<TaskAnswer> getTaskAnswers() {
-        return this.taskAnswers;
-    }
+    private List<TaskAnswer> taskAnswers;
 
-    public void setTaskAnswers(final List<TaskAnswer> taskAnswers) {
-        this.taskAnswers = taskAnswers;
-    }
 }
