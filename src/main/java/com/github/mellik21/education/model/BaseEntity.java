@@ -9,8 +9,8 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import java.time.LocalDateTime;
+import javax.persistence.MappedSuperclass;;
+import java.util.Date;
 
 @MappedSuperclass
 @NoArgsConstructor
@@ -23,9 +23,9 @@ public class BaseEntity {
     String id;
 
     @CreatedDate
-    LocalDateTime createdAt;
+    Date createdAt;
 
     @LastModifiedDate
-    LocalDateTime updatedAt;
+    Date updatedAt;
 
 }

@@ -10,9 +10,9 @@ import java.util.List;
 @Table(name = "student")
 public class StudentEntity extends ManEntity {
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_COURSE_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_COURSE"))
+    @JoinColumn(name = "FK_COURSE_ID")
     private CourseEntity course;
-    private Long score;
+    private int score;
 
     @OneToMany
     @JoinTable(name = "STUDENT_ANSWERS", schema = "EDU_PORTAL",

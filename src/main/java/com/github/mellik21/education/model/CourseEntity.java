@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 public class CourseEntity extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_AUTHOR_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_MAN"))
+    @JoinColumn(name = "FK_AUTHOR_ID")
     private ManEntity author;
     private String title;
     private String description;

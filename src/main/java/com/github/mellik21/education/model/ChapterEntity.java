@@ -13,7 +13,7 @@ public class ChapterEntity extends BaseEntity {
      * Подтема курса
      */
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_COURSE_ID", foreignKey = @ForeignKey(name = "CHAPTER_2_COURSE"))
+    @JoinColumn(name = "FK_COURSE_ID")
     private CourseEntity course;
 
     private String title;

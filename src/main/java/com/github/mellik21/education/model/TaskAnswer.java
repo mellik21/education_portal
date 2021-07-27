@@ -10,10 +10,10 @@ import javax.persistence.*;
 public class TaskAnswer extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_TASK_ID", foreignKey = @ForeignKey(name = "TASK_ANSWER_2_TASK"))
+    @JoinColumn(name = "FK_TASK_ID")
     private TaskEntity task;
     private String answer;
-    private Long score;
+    private int score;
     private int answerIndex;
 
 }

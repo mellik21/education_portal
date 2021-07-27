@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Data
 public class TaskEntity extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_CHAPTER_ID", foreignKey = @ForeignKey(name = "TASK_2_CHAPTER"))
+    @JoinColumn(name = "FK_CHAPTER_ID")
     private ChapterEntity chapter;
     private String title;
     private String taskText;
