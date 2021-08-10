@@ -2,16 +2,12 @@ import React, { FC } from 'react'
 import { ButtonType } from '../../../assets/Types'
 import { Link } from 'react-router-dom';
 
-const Button: FC<ButtonType> = ({type, background, content, link}) => {
-    const btnOnclick = () => {
-
-    }
-
+const Button: FC<ButtonType> = ({type, btnOnClick, background, content, link = ''}) => {
     if(type === 'button'){
         return (
             <button 
                 className = {`btn btn-${background}`} 
-                onClick = {btnOnclick}
+                onClick = {btnOnClick}
             >
                 {content}
             </button>  
