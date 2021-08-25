@@ -1,8 +1,15 @@
 import React, { FC } from 'react'
-import { ButtonType } from '../../../assets/Types'
 import { Link } from 'react-router-dom';
 
-const Button: FC<ButtonType> = ({type, btnOnClick, background, content, link = ''}) => {
+interface ButtonType{
+    type?: 'link' | 'button';
+    btnOnClick?: () => void;
+    background?: 'mainGreen' | 'grayBlue';
+    content: string;
+    link?: any;
+}
+
+const Button: FC<ButtonType> = ({type = 'link', btnOnClick, background = 'mainGreen', content = '', link = ''}) => {
     if(type === 'button'){
         return (
             <button 

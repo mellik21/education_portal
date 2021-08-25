@@ -3,12 +3,12 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/index.tsx",
     mode: "development",
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|tsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader",
                 options: {
@@ -29,7 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ["*", ".js", ".jsx"]
+        extensions: ["*", ".js", ".jsx", ".tsx"]
     },
     output: {
         path: path.resolve(__dirname, "public/dist"),
