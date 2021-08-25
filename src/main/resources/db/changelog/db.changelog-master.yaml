@@ -1,0 +1,9 @@
+databaseChangeLog:
+- changeSet:
+    id:  empty-example
+    author:  liquibase-docs
+    changes:
+        -  empty:  {}
+### Uncomment when ream changesets are added
+#- includeAll:
+#    path: classpath*:/db/changelog/changesets

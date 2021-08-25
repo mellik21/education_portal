@@ -13,7 +13,14 @@ function App (props) {
     
     
     return (
+
         <Header />
+
+        <div>
+            <h2>App component</h2>
+            <p>Test mock ping status code is {pingStatus}</p>
+        </div>
+
     )
 }
 
