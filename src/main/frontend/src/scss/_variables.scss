@@ -1,0 +1,31 @@
+/*Colors*/
+
+$mainGreen: #71C3B0;
+$grayBlue: #AFB7E0;
+$darkGray: #7991AE;
+$lightBlue: #B8D1ED;
+$black: #000;
+$white: #fff;
+$darkGreen: #10735B;
+
+
+/*Fonts*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+$mainFont: 'Roboto';
+$lightFont: 'Roboto-light';
+$boldFont: 'Roboto-Bold';

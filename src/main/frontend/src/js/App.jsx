@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import Header from './components/Header/Header';
 
 function App (props) {
     
@@ -12,10 +13,14 @@ function App (props) {
     
     
     return (
+
+        <Header />
+
         <div>
             <h2>App component</h2>
             <p>Test mock ping status code is {pingStatus}</p>
         </div>
+
     )
 }
 
